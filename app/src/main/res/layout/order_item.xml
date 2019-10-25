@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/orderConstraintLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/orderBurgerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="burger name" />
+
+    <ImageView
+        android:id="@+id/orderImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/burger_content"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/orderSubtotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:background="@color/background"/>
+
+    <TextView
+        android:id="@+id/orderBurgerCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/orderSubtotal"
+        app:layout_constraintEnd_toStartOf="@+id/orderSubtotal"
+        tools:text="cost" />
+
+    <TextView
+        android:id="@+id/orderQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/orderSubtotal"
+        app:layout_constraintEnd_toStartOf="@+id/orderBurgerCost"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="quantity" />
+
+    <TextView
+        android:id="@+id/orderSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderBurgerName"
+        tools:text="subtotal" />
+
+    <View
+        android:id="@+id/orderLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orderSubtotal" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

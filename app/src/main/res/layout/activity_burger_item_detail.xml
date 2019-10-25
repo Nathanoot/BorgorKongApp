@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:padding="8dp"
+        tools:context=".BurgerItemDetail">
+
+        <TextView
+            android:id="@+id/burgerDetailName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Burger name" />
+
+        <ImageView
+            android:id="@+id/burgerDetailImage"
+            android:layout_width="386dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/burger_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/burgerDetailName"
+            app:layout_constraintTop_toBottomOf="@id/burgerDetailName" />
+
+        <TextView
+            android:id="@+id/burgerDetailCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/burgerDetailImage"
+            app:layout_constraintTop_toBottomOf="@id/burgerDetailImage"
+            tools:text="Cost" />
+
+        <TextView
+            android:id="@+id/burgerDetailDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/burgerDetailCost"
+            app:layout_constraintStart_toStartOf="@id/burgerDetailCost"
+            app:layout_constraintTop_toBottomOf="@+id/burgerDetailCost"
+            tools:text="Description" />
+
+        <EditText
+            android:id="@+id/burgerAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:inputType="text"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="@+id/burgerDetailDescription"
+            app:layout_constraintStart_toStartOf="@+id/burgerDetailDescription"
+            app:layout_constraintTop_toBottomOf="@+id/burgerDetailDescription"
+            tools:text="Burger amount" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/add"
+            app:layout_constraintBaseline_toBaselineOf="@+id/burgerAmount"
+            app:layout_constraintStart_toEndOf="@+id/burgerAmount" />
+
+        <Button
+            android:id="@+id/buttonPurchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/detail_button"
+            app:layout_constraintEnd_toEndOf="@+id/burgerAmount"
+            app:layout_constraintStart_toStartOf="@+id/burgerAmount"
+            app:layout_constraintTop_toBottomOf="@+id/burgerAmount" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/minus"
+            app:layout_constraintBaseline_toBaselineOf="@+id/burgerAmount"
+            app:layout_constraintEnd_toStartOf="@+id/burgerAmount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
